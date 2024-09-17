@@ -25,25 +25,25 @@ public class MovieScriptAnalysis {
         job1.waitForCompletion(true);
 
         // Task 2: Dialogue Length Analysis
-        Job job2 = Job.getInstance(conf, "Dialogue Length Analysis");
-        job2.setJarByClass(MovieScriptAnalysis.class);
-        job2.setMapperClass(DialogueLengthMapper.class);
-        job2.setReducerClass(DialogueLengthReducer.class);
-        job2.setOutputKeyClass(Text.class);
-        job2.setOutputValueClass(IntWritable.class);
-        FileInputFormat.addInputPath(job2, new Path(args[1]));
-        FileOutputFormat.setOutputPath(job2, new Path(args[2] + "/task2"));
-        job2.waitForCompletion(true);
+       // Job job2 = Job.getInstance(conf, "Dialogue Length Analysis");
+        //job2.setJarByClass(MovieScriptAnalysis.class);
+        //job2.setMapperClass(DialogueLengthMapper.class);
+        //job2.setReducerClass(DialogueLengthReducer.class);
+        //job2.setOutputKeyClass(Text.class);
+        //job2.setOutputValueClass(IntWritable.class);
+        //FileInputFormat.addInputPath(job2, new Path(args[1]));
+        //FileOutputFormat.setOutputPath(job2, new Path(args[2] + "/task2"));
+        //job2.waitForCompletion(true);
 
         // Task 3: Unique Words by Character
-        Job job3 = Job.getInstance(conf, "Unique Words by Character");
-        job3.setJarByClass(MovieScriptAnalysis.class);
-        job3.setMapperClass(UniqueWordsMapper.class);
-        job3.setReducerClass(UniqueWordsReducer.class);
-        job3.setOutputKeyClass(Text.class);
-        job3.setOutputValueClass(Text.class);
-        FileInputFormat.addInputPath(job3, new Path(args[1]));
-        FileOutputFormat.setOutputPath(job3, new Path(args[2] + "/task3"));
-        System.exit(job3.waitForCompletion(true) ? 0 : 1);
+        //Job job3 = Job.getInstance(conf, "Unique Words by Character");
+        //job3.setJarByClass(MovieScriptAnalysis.class);
+        //job3.setMapperClass(UniqueWordsMapper.class);
+        //job3.setReducerClass(UniqueWordsReducer.class);
+        //job3.setOutputKeyClass(Text.class);
+        //job3.setOutputValueClass(Text.class);
+        //FileInputFormat.addInputPath(job3, new Path(args[1]));
+        //FileOutputFormat.setOutputPath(job3, new Path(args[2] + "/task3"));
+        //System.exit(job3.waitForCompletion(true) ? 0 : 1);
     }
 }
